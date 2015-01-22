@@ -12,6 +12,28 @@
             <li><a href="laborationer.html">Laborationer</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
-        <p></p>
+        <p>OBS! Allt du fyller i är livstidsbindande.</p>
+        <form action="contact-form-handler.php" method="post">
+            <fieldset>
+                <legend>Fråga</legend>
+                <label for="typ">Ärendetyp</label>
+                <select name="typ" id="typ">
+                    <option value="Fråga">Fråga</option>
+                    <option value="Påstående">Påstående</option>
+                    <option value="Tillsägelse">Tillsägelse</option>
+                </select>
+                <label for="mail">Din mail</label>
+                <input type="email" id="mail" name="mail" placeholder="Din mail" />
+                <label for="message">Fråga</label>
+                <textarea cols="30" rows="3" id="message" name="message" placeholder="Din fråga"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Hur vill du bli kontaktad?</legend>
+                <input type="radio" name="kontakt" value="Via mail"/> Via mail
+                <input type="radio" name="kontakt" value="Via fax" checked /> Via fax
+                <input type="radio" name="kontakt" value="Via ombud"/> Via ombud
+            </fieldset>
+            <input type="Submit" value="Skicka fråga"/>
+        </form>
     </body>
 </html>
